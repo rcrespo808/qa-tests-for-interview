@@ -1,0 +1,662 @@
+id: Y22BaPMhcUCBmH0NN3G6Vg
+projectId: NABRmpi2mkOX4F8IhDTuYA
+projectName: QA Tests for Interview
+created: 2022-02-19T14:20:04.2570095Z
+protocol: 1
+tests:
+- id: l5LIIZgOpUm1qtvUruCJDw
+  name: FE Delete Project
+  description: login to todo.ly, create a new project and delete it
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-02-19T04:31:56.0000000
+  modificationDate: 2022-02-19T04:41:58.0000000
+  settings:
+    automationAssistant: true
+    appId: 9-h7pkOWaU6PgZZHx4Gvyg
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  application:
+    id: 9-h7pkOWaU6PgZZHx4Gvyg
+    name: Todo.ly
+    url: https://todo.ly/
+    platform: Web
+  steps:
+  - id: twzCmK206kmZbD4ToduDWg
+    comments: Navigates the specified URL (Auto-generated)
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ApplicationURL}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: IaCtsQApyEyXvOXyNQHm1g
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Test
+    targetTestId: d4RPSalFJk6YgCoYJyZ3tw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      source: None
+    parameterMaps:
+    - name: ApplicationURL
+      value: '{{ApplicationURL}}'
+      direction: Input
+    - name: LoginEmail
+      value: '{{LoginEmail}}'
+      direction: Input
+    - name: LoginPassword
+      value: '{{LoginPassword}}'
+      direction: Input
+    - name: ProjectName
+      value: '{{ProjectName}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: IsExtSEQvEGTK2QTVf_q3Q
+    enabled: true
+    invertResult: false
+    order: 3
+    repeat: 1
+    type: Action
+    elementId: GMtplLgn2UGH6E20LAR1hA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: pNhhP8FS70el-nhaR1Ekwg
+    enabled: true
+    invertResult: false
+    order: 4
+    repeat: 1
+    type: Action
+    elementId: wQV_mZQ-h06w4zLuCoMv6A
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 92-RnKHCeU6gPz29C0tcnA
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 5
+    repeat: 1
+    type: Addon
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 22Nw5UqP7EGqvQhuHT2kqg
+      source: Store
+      addonId: Xey4bVsJQEODIUN7ssaJMg
+    parameterMaps:
+    - name: pause
+      value: ''
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  parameters:
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://todo.ly/
+    type: Input
+  - name: LoginEmail
+    description: ''
+    value: rcrespo808@gmail.com
+    type: Input
+  - name: LoginPassword
+    description: ''
+    value: 12345
+    type: Input
+  - name: ProjectName
+    description: ''
+    value: New Project
+    type: Input
+  tags:
+  - Automation
+  - UI
+  - CREATE
+  - DELETE
+auxTests:
+- id: d4RPSalFJk6YgCoYJyZ3tw
+  name: FE Create Project
+  description: Create new project
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-02-19T04:27:27.0000000
+  modificationDate: 2022-02-19T04:42:28.0000000
+  settings:
+    automationAssistant: true
+    appId: 9-h7pkOWaU6PgZZHx4Gvyg
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  steps:
+  - id: NRltbVL2n0yxbzUvp_bF_g
+    comments: Navigates the specified URL (Auto-generated)
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ApplicationURL}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: my5wnnaRv0muVNIC4IoQ2g
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Test
+    targetTestId: iy4ShV5KbUuVcdHabmT8Eg
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      source: None
+    parameterMaps:
+    - name: ApplicationURL
+      value: '{{ApplicationURL}}'
+      direction: Input
+    - name: LoginEmail
+      value: '{{LoginEmail}}'
+      direction: Input
+    - name: LoginPassword
+      value: '{{LoginPassword}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: ufx0pwLCPEOqIP2W6M13dA
+    enabled: true
+    invertResult: false
+    order: 3
+    repeat: 1
+    type: Action
+    elementId: 9c-pi3HOuke4uk1cVhov2w
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: oMqtv-A_yU6AZAqIRcgoHw
+    enabled: true
+    invertResult: false
+    order: 4
+    repeat: 1
+    type: Action
+    elementId: bGz-nd6NoEaI3ighBstB5Q
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: A0lGWJqCLEWjmkkVvewI8w
+    enabled: true
+    invertResult: false
+    order: 5
+    repeat: 1
+    type: Action
+    elementId: bGz-nd6NoEaI3ighBstB5Q
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: '{{ProjectName}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: VAfI71abi0-8pP8qi5wY-A
+    enabled: true
+    invertResult: false
+    order: 6
+    repeat: 1
+    type: Action
+    elementId: bGz-nd6NoEaI3ighBstB5Q
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 928bf14e-7a56-4371-b92a-9cb9de53f632
+      source: System
+    parameterMaps:
+    - name: keys
+      value: ENTER
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  parameters:
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://todo.ly/
+    type: Input
+  - name: LoginEmail
+    description: ''
+    value: rcrespo808@gmail.com
+    type: Input
+  - name: LoginPassword
+    description: ''
+    value: 12345
+    type: Input
+  - name: ProjectName
+    description: ''
+    value: New Project
+    type: Input
+  tags:
+  - UI
+  - Automation
+  - CREATE
+  - project
+- id: iy4ShV5KbUuVcdHabmT8Eg
+  name: FE Sign in
+  description: Sign in to todo.ly
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-02-19T04:21:39.0000000
+  modificationDate: 2022-02-19T04:42:42.0000000
+  settings:
+    automationAssistant: true
+    appId: 9-h7pkOWaU6PgZZHx4Gvyg
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  steps:
+  - id: rQ87fiq3hkCrrqR-iOsYxg
+    comments: Navigates the specified URL (Auto-generated)
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ApplicationURL}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: BvVLmW-TO0SsQT3g4ojK8A
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Action
+    elementId: xOjH1RHSpEOLB9DfuKHUpg
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: uRmvTyMw0USTs91tsXbhYA
+    enabled: true
+    invertResult: false
+    order: 3
+    repeat: 1
+    type: Action
+    elementId: bkMlEG4O0EmeIf2adF1GBA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: qke3cAwV_kuD4_WOAesGNg
+    enabled: true
+    invertResult: false
+    order: 4
+    repeat: 1
+    type: Action
+    elementId: bkMlEG4O0EmeIf2adF1GBA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: rcrespo808@gmail.com
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: Ju1XEAMGM0yl6RdtfoaLFg
+    enabled: true
+    invertResult: false
+    order: 5
+    repeat: 1
+    type: Action
+    elementId: hMnj41RggEuDYe3fSYfqTQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: 12345
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: hj05W2RWJ0aiIVnJ_U7Gew
+    enabled: true
+    invertResult: false
+    order: 6
+    repeat: 1
+    type: Action
+    elementId: SQ-mL8FiSkCKHMEyQUIGmw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  parameters:
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://todo.ly/
+    type: Input
+  - name: LoginEmail
+    description: ''
+    value: rcrespo808@gmail.com
+    type: Input
+  - name: LoginPassword
+    description: ''
+    type: Input
+  tags:
+  - sign-in
+  - UI
+  - Automation
+elements:
+- id: GMtplLgn2UGH6E20LAR1hA
+  name: Options1
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTI
+    name: Image
+    source: System
+  locators:
+  - name: XPATH
+    value: //li[7]/div/table/tbody/tr/td[4]//img
+    priority: 0
+  - name: XPATH
+    value: /html/body/form/div[3]/table/tbody/tr[2]/td/div/div/table/tbody/tr/td[1]/div[4]/ul/li[7]/div/table/tbody/tr/td[4]/div[2]/img
+    priority: 1
+- id: wQV_mZQ-h06w4zLuCoMv6A
+  name: Delete
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTE
+    name: Link
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#ProjShareMenuDel'
+    priority: 0
+  - name: XPATH
+    value: //li[4]/a[. = 'Delete']
+    priority: 1
+  - name: XPATH
+    value: //td/div/div/ul[1]/li[4]/a
+    priority: 2
+  - name: XPATH
+    value: /html/body/form/div[3]/table/tbody/tr[2]/td/div/div/ul[1]/li[4]/a
+    priority: 3
+- id: 9c-pi3HOuke4uk1cVhov2w
+  name: Add New Project
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTY
+    name: TableCell
+    source: System
+  locators:
+  - name: XPATH
+    value: //td[. = 'Add New Project']
+    priority: 0
+  - name: XPATH
+    value: //div[6]/div/table//td[2]
+    priority: 1
+  - name: XPATH
+    value: /html/body/form/div[3]/table/tbody/tr[2]/td/div/div/table/tbody/tr/td[1]/div[6]/div/table/tbody/tr/td[2]
+    priority: 2
+- id: bGz-nd6NoEaI3ighBstB5Q
+  name: NewProjNameInput
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#NewProjNameInput'
+    priority: 0
+  - name: XPATH
+    value: //div[5]/table//input[1]
+    priority: 1
+  - name: XPATH
+    value: /html/body/form/div[3]/table/tbody/tr[2]/td/div/div/table/tbody/tr/td[1]/div[5]/table/tbody/tr/td/input[1]
+    priority: 2
+- id: xOjH1RHSpEOLB9DfuKHUpg
+  name: IMG1
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTI
+    name: Image
+    source: System
+  locators:
+  - name: XPATH
+    value: //div[2]/a/img
+    priority: 0
+  - name: XPATH
+    value: /html/body/form/div[3]/table/tbody/tr[2]/td/div/div/div[2]/div[1]/div[2]/a/img
+    priority: 1
+- id: bkMlEG4O0EmeIf2adF1GBA
+  name: ctl00$MainContent$LoginControl1$TextB...
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#ctl00_MainContent_LoginControl1_TextBoxEmail'
+    priority: 0
+  - name: CSSSELECTOR
+    value: "[name='ctl00$MainContent$LoginControl1$TextBoxEmail']"
+    priority: 1
+  - name: XPATH
+    value: //div/div[1]/input[1]
+    priority: 2
+  - name: XPATH
+    value: /html/body/form/div[3]/table/tbody/tr[2]/td/div/div/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]
+    priority: 3
+- id: hMnj41RggEuDYe3fSYfqTQ
+  name: ctl00$MainContent$LoginControl1$TextB...1
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#ctl00_MainContent_LoginControl1_TextBoxPassword'
+    priority: 0
+  - name: CSSSELECTOR
+    value: "[name='ctl00$MainContent$LoginControl1$TextBoxPassword']"
+    priority: 1
+  - name: XPATH
+    value: //div/div[1]/input[2]
+    priority: 2
+  - name: XPATH
+    value: /html/body/form/div[3]/table/tbody/tr[2]/td/div/div/div[2]/div[1]/div[1]/div[1]/div[1]/input[2]
+    priority: 3
+- id: SQ-mL8FiSkCKHMEyQUIGmw
+  name: ctl00$MainContent$LoginControl1$Butto...
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#ctl00_MainContent_LoginControl1_ButtonLogin'
+    priority: 0
+  - name: CSSSELECTOR
+    value: "[name='ctl00$MainContent$LoginControl1$ButtonLogin']"
+    priority: 1
+  - name: XPATH
+    value: //div[5]/input
+    priority: 2
+  - name: XPATH
+    value: /html/body/form/div[3]/table/tbody/tr[2]/td/div/div/div[2]/div[1]/div[1]/div[1]/div[1]/div[5]/input
+    priority: 3
+projectParameters: []
+addons:
+- id: Xey4bVsJQEODIUN7ssaJMg
+  source: Store
+  version: 1.1.9
+  actions:
+  - id: 22Nw5UqP7EGqvQhuHT2kqg
+    name: Accept alert
+    description: Accept alert
+    className: io.testproject.addons.web.alert.AcceptAlert
+  minSdkLevel: 2
+  minSdkVersion: 0.63.1
+  sdkGeneration: 1
+  language: Java
+  hash: 2D35A7CE404CDBD8C628208C7BF6C79678E47DC6F249518E97AC68E19F0A0B6D
