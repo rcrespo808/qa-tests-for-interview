@@ -1,0 +1,278 @@
+id: eXlX1n5PcUyIwoyyErAf5Q
+projectId: NABRmpi2mkOX4F8IhDTuYA
+projectName: QA Tests for Interview
+created: 2022-02-19T14:20:04.2574421Z
+protocol: 1
+tests:
+- id: yDomkbjKLEe8iVElQfDs8g
+  name: BE Test Update FullName
+  description: ''
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-02-19T05:59:12.0000000
+  modificationDate: 2022-02-19T06:11:27.0000000
+  settings:
+    automationAssistant: true
+    appId: 9-h7pkOWaU6PgZZHx4Gvyg
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  application:
+    id: 9-h7pkOWaU6PgZZHx4Gvyg
+    name: Todo.ly
+    url: https://todo.ly/
+    platform: Web
+  steps:
+  - id: NDD6E5Tg_E6eMPcM3ShZGg
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Test
+    targetTestId: 975JE9PLbEC_75QCIrP2lA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      source: None
+    parameterMaps:
+    - name: ApplicationURL
+      value: '{{ApplicationURL}}'
+      direction: Input
+    - name: LoginEmail
+      value: '{{LoginEmail}}'
+      direction: Input
+    - name: LoginPassword
+      value: '{{LoginPassword}}'
+      direction: Input
+    - name: auth
+      value: '{{auth}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: nmFYSh08jUKqN5HzSG8ixQ
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Addon
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 3pyX37O89EenPV590WXfPQ
+      source: Store
+      addonId: Ujn6E4VbkEa6QU2XChYMyQ
+    parameterMaps:
+    - name: uri
+      value: https://todo.ly/api/user/0.xml
+      direction: Input
+    - name: query
+      value: ''
+      direction: Input
+    - name: headers
+      value: Authorization= Basic {{auth}}
+      direction: Input
+    - name: body
+      value: >-
+        <UserObject>
+
+          <FullName>{{NewFullname}}</FullName>
+
+        </UserObject>
+      direction: Input
+    - name: format
+      value: ''
+      direction: Input
+    - name: expectedStatus
+      value: ''
+      direction: Input
+    - name: jsonPath
+      value: ''
+      direction: Input
+    - name: response
+      value: ''
+      direction: Output
+    - name: status
+      value: ''
+      direction: Output
+    - name: ignoreUntrustedCertificate
+      value: ''
+      direction: Input
+    - name: responseHeaders
+      value: ''
+      direction: Output
+    - name: jsonResponse
+      value: ''
+      direction: Output
+    - name: schemaPath
+      value: ''
+      direction: Input
+    - name: createFile
+      value: ''
+      direction: Input
+    - name: schemaValidationOutputFilePath
+      value: ''
+      direction: Input
+    - name: schemaValidationOutput
+      value: ''
+      direction: Output
+    - name: headerDelimiter
+      value: ''
+      direction: Input
+    - name: filePath
+      value: ''
+      direction: Input
+    conditions: []
+    validations:
+    - type: Starts
+      invert: false
+      field: jsonResponse
+      value: <UserObject>
+    contexts: []
+  parameters:
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://todo.ly/
+    type: Input
+  - name: LoginEmail
+    description: ''
+    value: rcrespo808@gmail.com
+    type: Input
+  - name: LoginPassword
+    description: ''
+    value: 12345
+    type: Input
+  - name: auth
+    description: ''
+    value: ''
+    type: Private
+  - name: NewFullname
+    description: ''
+    value: New Name
+    type: Input
+  tags:
+  - Backend
+  - Update
+  - user
+  - Automation
+auxTests:
+- id: 975JE9PLbEC_75QCIrP2lA
+  name: BE Auth
+  description: Create credentials for API basic auth
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-02-19T05:30:48.0000000
+  modificationDate: 2022-02-19T05:49:17.0000000
+  settings:
+    automationAssistant: true
+    appId: 9-h7pkOWaU6PgZZHx4Gvyg
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  steps:
+  - id: IG5GHzeAhEO98CtiLo2Zcg
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Addon
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: olKh2FpQiU-SZt5RscDqlQ
+      source: Store
+      addonId: vgtW6b4VIEK_leq2b-6_Yw
+    parameterMaps:
+    - name: inputString
+      value: '{{LoginEmail}}:{{LoginPassword}}'
+      direction: Input
+    - name: filePath
+      value: ''
+      direction: Input
+    - name: encodedString
+      value: '{{auth}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  parameters:
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://todo.ly/
+    type: Input
+  - name: LoginEmail
+    description: ''
+    value: rcrespo808@gmail.com
+    type: Input
+  - name: LoginPassword
+    description: ''
+    value: 12345
+    type: Input
+  - name: auth
+    description: ''
+    value: ''
+    type: Output
+  tags:
+  - Authentication
+  - Automation
+  - Backend
+elements: []
+projectParameters: []
+addons:
+- id: Ujn6E4VbkEa6QU2XChYMyQ
+  source: Store
+  version: 1.6.10
+  actions:
+  - id: 3pyX37O89EenPV590WXfPQ
+    name: HTTP POST Request
+    description: POST {{uri}}?{{query}}
+    className: io.testproject.addon.restfulapiclient.actions.PostAction
+  - id: DiRlYudmtUGjjOgGCGzRIA
+    name: HTTP GET Request
+    description: GET {{uri}}?{{query}}
+    className: io.testproject.addon.restfulapiclient.actions.GetAction
+  - id: ww4p8qViu0iP6bWWjn6L2g
+    name: HTTP DELETE Request
+    description: DELETE {{uri}}?{{query}}
+    className: io.testproject.addon.restfulapiclient.actions.DeleteAction
+  minSdkLevel: 2
+  minSdkVersion: 0.65.0
+  sdkGeneration: 1
+  language: Java
+  hash: 57049348D63450C0C1534B4F42E978E4294D0D97EA54E3B9E46042611553E0B0
+- id: vgtW6b4VIEK_leq2b-6_Yw
+  source: Store
+  version: 0.1
+  actions:
+  - id: olKh2FpQiU-SZt5RscDqlQ
+    name: Base64 Encode
+    description: Encode string or file to Base64
+    className: EncodeAction
+  minSdkLevel: 2
+  minSdkVersion: 0.61.0
+  sdkGeneration: 1
+  language: Java
+  hash: 217CF4E580F43E103E13B05822AC7648F302B3132CCF85819CB4C889653DA87F

@@ -1,0 +1,97 @@
+id: H4WtM-lCkkycO3funW7MAA
+projectId: NABRmpi2mkOX4F8IhDTuYA
+projectName: QA Tests for Interview
+created: 2022-02-19T14:20:04.2572883Z
+protocol: 1
+tests:
+- id: 975JE9PLbEC_75QCIrP2lA
+  name: BE Auth
+  description: Create credentials for API basic auth
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-02-19T05:30:48.0000000
+  modificationDate: 2022-02-19T05:49:17.0000000
+  settings:
+    automationAssistant: true
+    appId: 9-h7pkOWaU6PgZZHx4Gvyg
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  application:
+    id: 9-h7pkOWaU6PgZZHx4Gvyg
+    name: Todo.ly
+    url: https://todo.ly/
+    platform: Web
+  steps:
+  - id: IG5GHzeAhEO98CtiLo2Zcg
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Addon
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: olKh2FpQiU-SZt5RscDqlQ
+      source: Store
+      addonId: vgtW6b4VIEK_leq2b-6_Yw
+    parameterMaps:
+    - name: inputString
+      value: '{{LoginEmail}}:{{LoginPassword}}'
+      direction: Input
+    - name: filePath
+      value: ''
+      direction: Input
+    - name: encodedString
+      value: '{{auth}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  parameters:
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://todo.ly/
+    type: Input
+  - name: LoginEmail
+    description: ''
+    value: rcrespo808@gmail.com
+    type: Input
+  - name: LoginPassword
+    description: ''
+    value: 12345
+    type: Input
+  - name: auth
+    description: ''
+    value: ''
+    type: Output
+  tags:
+  - Authentication
+  - Automation
+  - Backend
+auxTests: []
+elements: []
+projectParameters: []
+addons:
+- id: vgtW6b4VIEK_leq2b-6_Yw
+  source: Store
+  version: 0.1
+  actions:
+  - id: olKh2FpQiU-SZt5RscDqlQ
+    name: Base64 Encode
+    description: Encode string or file to Base64
+    className: EncodeAction
+  minSdkLevel: 2
+  minSdkVersion: 0.61.0
+  sdkGeneration: 1
+  language: Java
+  hash: 217CF4E580F43E103E13B05822AC7648F302B3132CCF85819CB4C889653DA87F
