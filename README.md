@@ -48,3 +48,42 @@ http://todo.ly/ApiWiki/
 The Entire task set was automated using the TestProject tool
 
 Each task corresponds to a automation script and each task build on the previous one taking advantage of reusability
+  
+## How to use this project
+
+Test project requieres installation of an agent in order to perform tests, this can be achieved by following the official guide: <https://docs.testproject.io/getting-started/creating-an-account>
+  
+### Addons
+  The following Community addons where used in the project
+  
+  * Base64 Encoder-Decoder
+  
+  * RESTful API Client
+  
+  * Web Extensions
+### Parameters
+  Parameters for test cases are defined as following
+  * Username - Name to be used to register user in the system
+  * Email - Email to be used to register user in the system
+  * Password - password for login by user into the system
+  * ProjectName - Name of project to be registered by user un the system
+### Tests
+  
+  All tests are labeled FE for fronted and BE for backend respectively
+
+* FE signup is independent, in order to test it repeateldy a FE delete user script was also created
+* FE create project depends on the FE sign in script and performs both requirements stated as:
+    - Select "Add new Project"
+    - Create new Project
+* FE Delete project depends on Fe create project and fulfills requirement stated as:
+    - Delete created project
+  
+* BE Test Create test user fulfills requirement:
+    - Create User
+* BE Auth creates the auth token to be used by other BE tests
+* BE Test Get User fulfills requirement:
+    - Get User
+* BE Test Update user updates user object field "fullname", fulfilling requirement:
+    - Update User
+* BE test Delete User fulfills requirement:
+    - Delete User
